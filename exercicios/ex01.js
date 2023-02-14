@@ -3,7 +3,7 @@
 */
 
 function imprimirNome(nome){
-    console.log("Olá, " + nome + "!")
+    return "Olá, " + nome + "!"
 }
 
-imprimirNome('João')
+console.log(imprimirNome('João'))
