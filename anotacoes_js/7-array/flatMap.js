@@ -33,3 +33,5 @@ console.log(notas1)
 Array.prototype.flatMap = function(callback){
     return Array.prototype.concat.apply([], this.map(callback))
 }
+const notas2 = escola.flatMap(getNotasTurma)
+console.log(notas2)
