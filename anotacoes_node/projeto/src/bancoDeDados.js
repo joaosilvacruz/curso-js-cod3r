@@ -7,11 +7,9 @@ const produtos = {}
 
 // Salvando o produto caso ele não exista
 function salvarProduto(produto) {
-    if (!produto.id) {
-        produto.id = sequence.id
+    if (!produto.id) produto.id = sequence.id
         produtos[produto.id] = produto
         return produto
-    }
 }
 
 // Retornando o produto caso ele existe ou retornando objeto vazio caso não exista
@@ -24,4 +22,11 @@ function getProdutos() {
     return Object.values(produtos)
 }
 
-module.exports = {salvarProduto, getProduto, getProdutos}
+// Excluindo produtos
+function excluirProdutos(id) {
+    const produto = produtos[i]
+    delete produtos[i]
+    return produto
+}
+
+module.exports = {salvarProduto, getProduto, getProdutos, excluirProdutos}
